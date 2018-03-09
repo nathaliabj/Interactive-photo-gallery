@@ -1,3 +1,6 @@
+
+// Function for the search box
+
 function myFunction() {
     // Variables
     var input, filter, ul, li, a, i;
@@ -16,3 +19,10 @@ function myFunction() {
         }
     }
 }
+
+
+// loop to fade the gallery when the page is loaded
+
+$( "#gallery li" ).each(function( index ) {
+  $(this).fadeTo(0, 0).delay(150 * index).fadeTo(400, 1, 'swing');
+});
