@@ -12,7 +12,7 @@ function myFunction() {
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1 || $(a).data("title") === filter.toLocaleLowerCase()) {
+        if ($(a).data("title").toUpperCase().indexOf(filter) > -1 ) {
             li[i].style.display = "";
         } else {
             li[i].style.display = "none";
@@ -21,7 +21,7 @@ function myFunction() {
 }
 
 
-// loop to fade the gallery when the page is loaded
+// loop to fade the gallery when the
 
 $( "#gallery li" ).each(function( index ) {
   $(this).fadeTo(0, 0).delay(150 * index).fadeTo(400, 1, 'swing');
